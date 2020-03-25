@@ -1,22 +1,37 @@
 <idea-plugin>
     <id>de.dreamlinemedia.luxafor-intellij</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>Luxafor Color Switch</name>
+    <vendor email="thomas.wehner@tro-lan.de" url="https://github.com/thwehner/luxafor-intellij">Github Repository</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    This is an integration for luxafor products to switch colors inside of IntelliJ.
+    <em>Notice: Luxafor app have to be installed</em>
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
+    <extensions defaultExtensionNs="de.dreamlinemedia.luxafor-intellij">
         <!-- Add your extensions here -->
     </extensions>
 
     <actions>
         <!-- Add your actions here -->
+        <group id="de.dreamlinemedia.luxaforintellij.actions" compact="true">
+            <action id="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction.red"
+                    class="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction"
+                    text="Switch to Red" description="Switches your luxafor flag to red" icon="ActionIcons.ACTION_SOLID_COLOR_RED">
+            </action>
+            <separator />
+            <action id="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction.yellow"
+                    class="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction"
+                    text="Switch to Yellow" description="Switches your luxafor flag to yellow" icon="ActionIcons.ACTION_SOLID_COLOR_YELLOW"/>
+            <separator />
+            <action id="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction.green"
+                    class="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction"
+                    text="Switch to Green" description="Switches your luxafor flag to green" icon="ActionIcons.ACTION_SOLID_COLOR_GREEN"/>
+            <add-to-group group-id="MainToolBar" anchor="last" />
+        </group>
     </actions>
 </idea-plugin>
