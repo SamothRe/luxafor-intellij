@@ -1,37 +1,30 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>de.dreamlinemedia.luxafor-intellij</id>
-    <name>Luxafor Color Switch</name>
-    <vendor email="thomas.wehner@tro-lan.de" url="https://github.com/thwehner/luxafor-intellij">Github Repository</vendor>
+  <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+  <id>com.example.plugin-demo</id>
 
-    <description><![CDATA[
-    This is an integration for luxafor products to switch colors inside of IntelliJ.
-    <em>Notice: Luxafor app have to be installed</em>
-    ]]></description>
+  <!-- Public plugin name should be written in Title Case.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+  <name>Plugin-demo</name>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <depends>com.intellij.modules.platform</depends>
+  <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+  <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
 
-    <extensions defaultExtensionNs="de.dreamlinemedia.luxafor-intellij">
-        <!-- Add your extensions here -->
-    </extensions>
+  <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+       Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+  <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+  ]]></description>
 
-    <actions>
-        <!-- Add your actions here -->
-        <group id="de.dreamlinemedia.luxaforintellij.actions" compact="true">
-            <action id="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction.red"
-                    class="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction"
-                    text="Switch to Red" description="Switches your luxafor flag to red" icon="ActionIcons.ACTION_SOLID_COLOR_RED">
-            </action>
-            <separator />
-            <action id="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction.yellow"
-                    class="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction"
-                    text="Switch to Yellow" description="Switches your luxafor flag to yellow" icon="ActionIcons.ACTION_SOLID_COLOR_YELLOW"/>
-            <separator />
-            <action id="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction.green"
-                    class="de.dreamlinemedia.luxaforintellij.actions.SolidColorSwitchAction"
-                    text="Switch to Green" description="Switches your luxafor flag to green" icon="ActionIcons.ACTION_SOLID_COLOR_GREEN"/>
-            <add-to-group group-id="MainToolBar" anchor="last" />
-        </group>
-    </actions>
+  <!-- Product and plugin compatibility requirements.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <!-- Extension points defined by the plugin.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+  <extensions defaultExtensionNs="com.intellij">
+
+  </extensions>
 </idea-plugin>
