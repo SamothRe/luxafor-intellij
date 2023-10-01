@@ -20,6 +20,10 @@ intellij {
     plugins.set(listOf(/* Plugin Dependencies */))
 }
 
+dependencies {
+    implementation("com.konghq:unirest-java:3.14.5")
+}
+
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
